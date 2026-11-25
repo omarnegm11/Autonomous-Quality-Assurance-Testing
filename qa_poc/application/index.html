@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>QA Task Lab</title><style>
+body{font:16px system-ui;background:#f3f5fa;color:#1b2540;margin:3rem auto;max-width:800px;padding:0 1rem}
+main{background:white;border:1px solid #d4dbea;border-radius:12px;padding:2rem}label{display:block;margin:1rem 0}
+input,button{font:inherit;padding:.65rem;border:1px solid #aab5cc;border-radius:5px}button{cursor:pointer;background:#e7eeff;margin:.25rem}
+li{display:flex;align-items:center;gap:.3rem;margin:1rem 0}li input{flex:1;min-width:0}#message{color:#a02020}
+</style></head><body><main><h1>QA Task Lab</h1><p>Dedicated synthetic test application</p>
+<section id="login-panel"><h2>Sign in</h2><form id="login-form">
+<label>Username <input id="username" data-testid="username" autocomplete="username" required></label>
+<label>Password <input id="password" data-testid="password" type="password" autocomplete="current-password" required></label>
+<button data-testid="login" type="submit">Sign in</button></form></section>
+<section id="task-panel" hidden><button id="logout" data-testid="logout">Sign out</button><h2>Your tasks</h2>
+<form id="task-form"><label>Task title <input id="new-title" data-testid="new-title" maxlength="200" required></label>
+<button data-testid="create" type="submit">Create task</button></form>
+<p>Last created task: <output id="last-created"></output></p><ul id="task-list"></ul></section>
+<p id="message" role="status"></p></main><script src="/tasks.js"></script></body></html>
